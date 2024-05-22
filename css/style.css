@@ -1,0 +1,6 @@
+body {
+    font-family: var(--gill_sans-font);
+    font-size: var(--large-font-size);
+    font-weight: bold;
+    background-color: var(--bgcolor);
+}

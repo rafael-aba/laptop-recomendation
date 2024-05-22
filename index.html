@@ -15,12 +15,24 @@
 
 <body>
     <div class="container">
-        <div class="clock">
+        <div class="form">
             <div class="date">
-                <p id="week-day"></p>
-                <p id="current-date"></p>
+                <p>Deseja comprar um laptop?</p>
             </div>
-            <div class="time">
+            <div>
+                <p>Qual seu caso de uso?</p>
+                <select id="user-case">
+                    <option value="trabalho">Trabalho</option>
+                    <option value="jogos">Jogos</option>
+                    <option value="casual">Casual</option>
+                    <option value="servidor">Servidor</option>
+                </select>
+            </div>
+            <div>
+                <p>Quanto para gastar?</p>
+                <input id="money"/>
+            </div>
+            <div class="laptop-list">
                 <p id="hours"></p>
                 <p id="separator">:</p>
                 <p id="minutes"></p>

@@ -16,14 +16,6 @@
     grid-template-columns: 1fr;
 }
 
-.time {
-    grid-area: time;
-}
-
-.clock {
-    grid-area: date;
-}
-
 @media(min-width: 820px) {
 
     .clock {
