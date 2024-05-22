@@ -1,5 +1,8 @@
 # laptop-recomendation
 
+Access it by going to:
+https://rafael-aba.github.io/laptop-recomendation/
+
 ## Alunos
 - Maria Eduarda Alves de Oliveira (D23961)
 - Maria Luiza da Silva Freitas (D24672)
