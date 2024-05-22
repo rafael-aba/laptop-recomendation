@@ -4,3 +4,11 @@ body {
     font-weight: bold;
     background-color: var(--bgcolor);
 }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--ligther-color);
+    line-height: 1.1;
+}
