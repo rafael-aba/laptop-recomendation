@@ -22,13 +22,26 @@ function FillList() {
 
     mock_list.forEach((item) => {
         let div = document.createElement("div");
-        div.className = "to-do-element"
         let title = document.createElement("p");
         title.innerHTML = item.name
-        title.className = "to-do-title"
         let status = document.createElement("p");
         status.innerHTML = item.status
-        status.className = "to-do-status"
+
+        if (item.status === "ready") {
+            div.className = "to-do-element to-do-element-ready"
+            title.className = "to-do-title"
+            status.className = "to-do-status to-do-status-ready"
+        }
+        else if (item.status === "progress") {
+            div.className = "to-do-element to-do-element-progress"
+            title.className = "to-do-title"
+            status.className = "to-do-status to-do-status-progress"
+        }
+        else if (item.status === "done") {
+            div.className = "to-do-element to-do-element-done"
+            title.className = "to-do-title"
+            status.className = "to-do-status to-do-status-done"
+        }
 
         div.appendChild(title)
         div.appendChild(status)

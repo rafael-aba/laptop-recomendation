@@ -18,4 +18,8 @@
     --contrast-color: #FF105E;
     --ligther-color: #999A9A;
     --darker-color: #2C2C2C;
+
+    --ready-color: #cc3333;
+    --progress-color: #cccc33;
+    --done-color: #33cc33;
 }
