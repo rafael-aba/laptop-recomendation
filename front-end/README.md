@@ -1,7 +1,7 @@
 # to-do list frontend
 
 Acesse por aqui:
-https://rafael-aba.github.io/to-do/
+https://rafael-aba.github.io/to-do-list/
 
 ## Alunos
 - Maria Eduarda Alves de Oliveira (D23961)
