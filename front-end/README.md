@@ -1,11 +1,38 @@
-# to-do list frontend
+#Projeto Lista de Compras - Utilizado no Curso Objetos no JavaScript - Escola Front-End Alura
 
-Acesse por aqui:
-https://rafael-aba.github.io/to-do-list/front-end/index.html
+Neste arquivo encontram-se modelos de códigos que serão utilizados no decorrer do curso. 
 
-## Alunos
-- Maria Eduarda Alves de Oliveira (D23961)
-- Maria Luiza da Silva Freitas (D24672)
-- Rafael Antunes Batista (D24476)
-- Paulo Henrique Soares Ferreira (D23816)
-- Yan Carlos Duarte Velasco (D23739)
+Código modelo da li "Comprados":
+
+    <li class="item-compra is-flex is-justify-content-space-between" data-value="">
+        <div>
+            <input type="checkbox" checked class="is-clickable" />  
+            <span class="itens-comprados is-size-5"></span>
+        </div>
+        <div>
+            <i class="fa-solid fa-trash is-clickable deletar"></i>
+        </div>
+    </li>
+
+Código modelo da li "Lista de compras": 
+
+    <li class="item-compra is-flex is-justify-content-space-between" data-value="">
+        <div>
+            <input type="checkbox" class="is-clickable" />
+            <input type="text" class="is-size-5" value=""></input>
+        </div>
+        <div>
+            <i class="fa-solid fa-trash is-clickable deletar"></i>
+        </div>
+    </li>
+
+Input com código refatorado:
+
+    <div>
+        <input type="checkbox" checked class="is-clickable" />
+        <span class="itens-comprados is-size-5">${elemento.valor}</span>
+    </div>
+
+Ícones de edição:
+
+    <i class="fa-regular fa-floppy-disk is-clickable"></i><i class="fa-regular is-clickable fa-pen-to-square editar"></i>
