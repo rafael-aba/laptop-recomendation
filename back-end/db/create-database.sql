@@ -1,10 +1,10 @@
-CREATE DATABASE [product-db]
+CREATE DATABASE [todolist-db]
 GO
 
-USE [list-db];
+USE [todolist-db];
 GO
 
-CREATE TABLE element (
+CREATE TABLE elements (
 	Id INT NOT NULL IDENTITY,
 	Text TEXT NOT NULL,
 	Completed BIT NOT NULL,
