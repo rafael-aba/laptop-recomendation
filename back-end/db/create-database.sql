@@ -1,0 +1,14 @@
+CREATE DATABASE [product-db]
+GO
+
+USE [list-db];
+GO
+
+CREATE TABLE element (
+	Id INT NOT NULL IDENTITY,
+	Text TEXT NOT NULL,
+	Completed BIT NOT NULL,
+	Deleted BIT NOT NULL,
+	PRIMARY KEY (Id)
+);
+GO
