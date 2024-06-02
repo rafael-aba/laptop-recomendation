@@ -5,7 +5,7 @@ using EntriesLibrary;
 
 namespace aspnetcoreapp.Controllers
 {
-    [Route("")]
+    [Route("health")]
     public class EntriesController : ControllerBase
     {
         private readonly EntriesProvider _provider = new EntriesProvider();
