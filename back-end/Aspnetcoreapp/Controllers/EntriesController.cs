@@ -124,5 +124,18 @@ namespace aspnetcoreapp.Controllers
                 throw new Exception("Internal Server Error", e);
             }
         }
+
+        [HttpPost("{id}")]
+        public ActionResult<int> Edit([FromBody]int id, string text)
+        {
+            try
+            {
+                return _provider.Edit_Entry(id, text);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Internal Server Error", e);
+            }
+        }
     }
 }

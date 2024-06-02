@@ -16,7 +16,8 @@ namespace EntriesLibrary
         private const string QUERY_INSERT_NEW_ENTRY = "INSERT INTO entries (Text, Completed, Deleted, CreatedAt, CompletedAt, DeletedAt) VALUES (@text, 0, 0, @date, null, null); SELECT SCOPE_IDENTITY()";
         private const string QUERY_COMPLETE_ENTRY = "UPDATE entries SET Completed = 1, CompletedAt = @date WHERE Id = @id";
         private const string QUERY_DELETE_ENTRY = "UPDATE entries SET Deleted = 1, DeletedAt = @date WHERE Id = @id";
-        
+        private const string QUERY_EDIT_TEXT = "UPDATE entries SET Text = @text WHERE Id = @id";
+
         public Entry[] Get_All()
         {
             using (var connection = new SqlConnection(CONN_STRING))
@@ -78,6 +79,14 @@ namespace EntriesLibrary
             using (var connection = new SqlConnection(CONN_STRING))
             {
                 return connection.Execute(QUERY_DELETE_ENTRY, new { id, date });
+            }
+        }
+
+        public int Edit_Entry(int id, string text)
+        {
+            using (var connection = new SqlConnection(CONN_STRING))
+            {
+                return connection.Execute(QUERY_EDIT_TEXT, new { id, text });
             }
         }
     }
