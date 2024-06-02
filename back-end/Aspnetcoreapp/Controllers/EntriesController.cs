@@ -5,12 +5,12 @@ using EntriesLibrary;
 
 namespace aspnetcoreapp.Controllers
 {
-    [Route("health")]
+    [Route("")]
     public class EntriesController : ControllerBase
     {
         private readonly EntriesProvider _provider = new EntriesProvider();
 
-        [HttpGet]
+        [HttpGet("health")]
         public ActionResult<bool> Healthcheck()
         {
             return true;

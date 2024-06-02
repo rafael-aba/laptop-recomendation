@@ -18,22 +18,24 @@ namespace aspnetcoreapp
         {
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            // services.AddCors(options => {
-            //     options.AddPolicy(name: MyAllowSpecificOrigins,
-            //     policy  =>
-            //     {
-            //         policy.WithOrigins("localhost")
-            //             .AllowAnyHeader()
-            //             .AllowAnyMethod();
-            //     });
-            // });
+            services.AddCors(options => {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                policy  =>
+                {
+                    policy
+                 .AllowAnyOrigin() 
+                 .AllowAnyMethod()
+                 .AllowAnyHeader()
+                 .AllowCredentials();
+                });
+            });
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment()) 
                 app.UseDeveloperExceptionPage();
-            // app.UseCors(MyAllowSpecificOrigins);
+            app.UseCors(MyAllowSpecificOrigins);
             app.UseMvc();
         }
     }
