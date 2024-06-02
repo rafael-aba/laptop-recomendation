@@ -42,6 +42,19 @@ namespace aspnetcoreapp.Controllers
             }
         }
 
+        [HttpGet("list")]
+        public ActionResult<IEnumerable<Entry>> GetNotDeleted()
+        {
+            try
+            {
+                return _provider.Get_Not_Deleted();
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Internal Server Error", e);
+            }
+        }
+
         [HttpGet("not-completed")]
         public ActionResult<IEnumerable<Entry>> GetNotCompleted()
         {
@@ -82,16 +95,16 @@ namespace aspnetcoreapp.Controllers
         }
 
         [HttpPost]
-        public ActionResult<int> Post([FromBody] string entry)
+        public ActionResult<int> Post([FromBody] Entry entry)
         {
-            if (string.IsNullOrEmpty(entry))
+            if (string.IsNullOrEmpty(entry.Text))
             {
-                return BadRequest();
+                return BadRequest("Empty text");
             }
 
             try
             {
-                return _provider.Insert_Entry(entry, DateTime.Now);
+                return _provider.Insert_Entry(entry.Text, DateTime.Now);
             }
             catch (Exception e)
             {
@@ -105,6 +118,32 @@ namespace aspnetcoreapp.Controllers
             try
             {
                 return _provider.Complete_Entry(id, DateTime.Now);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Internal Server Error", e);
+            }
+        }
+
+        [HttpPut("{id}/toggle")]
+        public ActionResult<int> Toggle(int id)
+        {
+            try
+            {
+                return _provider.Toggle_Entry(id, DateTime.Now);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Internal Server Error", e);
+            }
+        }
+
+        [HttpPut("{id}/uncomplete")]
+        public ActionResult<int> Unomplete(int id)
+        {
+            try
+            {
+                return _provider.Uncomplete_Entry(id);
             }
             catch (Exception e)
             {
@@ -126,11 +165,11 @@ namespace aspnetcoreapp.Controllers
         }
 
         [HttpPost("{id}")]
-        public ActionResult<int> Edit([FromBody]int id, string text)
+        public ActionResult<int> Edit([FromRoute] int id, [FromBody] Entry entry)
         {
             try
             {
-                return _provider.Edit_Entry(id, text);
+                return _provider.Edit_Entry(id, entry.Text);
             }
             catch (Exception e)
             {
