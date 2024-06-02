@@ -11,6 +11,12 @@ namespace aspnetcoreapp.Controllers
         private readonly EntriesProvider _provider = new EntriesProvider();
 
         [HttpGet]
+        public ActionResult<bool> Healthcheck()
+        {
+            return true;
+        }
+
+        [HttpGet]
         public ActionResult<IEnumerable<Entry>> Get()
         {
             try
