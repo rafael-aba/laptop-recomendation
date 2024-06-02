@@ -1,0 +1,11 @@
+/Users/Rafael/Projects/to-do-list/back-end/EntriesLibrary/obj/Debug/netcoreapp2.2/EntriesLibrary.csproj.AssemblyReference.cache
+/Users/Rafael/Projects/to-do-list/back-end/EntriesLibrary/obj/Debug/netcoreapp2.2/EntriesLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Rafael/Projects/to-do-list/back-end/EntriesLibrary/obj/Debug/netcoreapp2.2/EntriesLibrary.AssemblyInfoInputs.cache
+/Users/Rafael/Projects/to-do-list/back-end/EntriesLibrary/obj/Debug/netcoreapp2.2/EntriesLibrary.AssemblyInfo.cs
+/Users/Rafael/Projects/to-do-list/back-end/EntriesLibrary/obj/Debug/netcoreapp2.2/EntriesLibrary.csproj.CoreCompileInputs.cache
+/Users/Rafael/Projects/to-do-list/back-end/EntriesLibrary/obj/Debug/netcoreapp2.2/EntriesLibrary.sourcelink.json
+/Users/Rafael/Projects/to-do-list/back-end/EntriesLibrary/bin/Debug/netcoreapp2.2/EntriesLibrary.deps.json
+/Users/Rafael/Projects/to-do-list/back-end/EntriesLibrary/bin/Debug/netcoreapp2.2/EntriesLibrary.dll
+/Users/Rafael/Projects/to-do-list/back-end/EntriesLibrary/bin/Debug/netcoreapp2.2/EntriesLibrary.pdb
+/Users/Rafael/Projects/to-do-list/back-end/EntriesLibrary/obj/Debug/netcoreapp2.2/EntriesLibrary.dll
+/Users/Rafael/Projects/to-do-list/back-end/EntriesLibrary/obj/Debug/netcoreapp2.2/EntriesLibrary.pdb

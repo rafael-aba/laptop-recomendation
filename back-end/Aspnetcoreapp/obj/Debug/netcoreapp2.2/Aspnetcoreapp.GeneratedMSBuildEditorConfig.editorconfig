@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = aspnetcoreapp
+build_property.ProjectDir = /Users/Rafael/Projects/to-do-list/back-end/Aspnetcoreapp/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
