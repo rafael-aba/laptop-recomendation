@@ -11,19 +11,23 @@ function atualiazaLocalStorage() {
   localStorage.setItem("listaItens", JSON.stringify(listaItens));
 }
 
-if (listaRecuperada) {
-  listaItens = JSON.parse(listaRecuperada);
-  mostrarItem();
-}else{
-  listaItens = [];
-}
+function start() {
+  backendAlive();
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  salvarItem();
-  mostrarItem();
-  itensInput.focus();
-});
+  if (listaRecuperada) {
+    listaItens = JSON.parse(listaRecuperada);
+    mostrarItem();
+  }else{
+    listaItens = [];
+  }
+  
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    salvarItem();
+    mostrarItem();
+    itensInput.focus();
+  });
+}
 
 function salvarItem() {
   const comprasItem = itensInput.value;
@@ -125,3 +129,19 @@ function salvarEdicao() {
   itemAEditar = -1;
   mostrarItem();
 }
+
+function backendAlive() {
+  fetch("http://localhost:8080/health")
+    .then((response) => {
+      if (response) {
+        console.log("Backend está funcionando");
+      } else {
+        console.log("Backend não está funcionando");
+      }
+    })
+    .catch((error) => {
+      console.log("Backend não está funcionando");
+    });
+}
+
+start();
